@@ -1,0 +1,68 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+
+$custom-colors: (
+  "iterd": #910000,
+  "itery": #F5C134,
+);
+$theme-colors: map-merge($theme-colors, $custom-colors);
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;700;900&family=Inter:wght@400;500;700;900&display=swap');
+
+*{
+     font-family:'Inter', sans-serif;
+}
+
+.brand{
+     height : 50px;
+}
+.btn.btn-iterd:hover{
+     background-color: var(--bs-itery);
+     border: var(--bs-itery) 1px solid;
+}
+nav  .nav-item{
+     margin-right: 1em;
+}
+nav .nav-link {
+     color : var(--bs-light);
+     transition: ease-out 20ms;
+}
+nav  .nav-link.active{
+     color : var(--bs-itery) !important;
+     font-weight: bold;
+     display: inline;
+     border-bottom: var(--bs-itery) solid 3px;
+}
+nav  .nav-link:hover, nav .nav-link:active{
+     color : var(--bs-itery);
+     display: inline;
+     border-bottom: var(--bs-itery) solid 3px;
+}
+.carousel {
+     height: 80vh;
+     overflow : hidden
+}
+
+.card-img-top{
+     height: 200px;
+     width: 100%;
+     object-fit: contain;
+}
+
+.nav-tabs .nav-link{
+     color : var(--bs-iterd);
+}
+
+.dataTables_paginate > .pagination > li:not(.disabled) > .page-link   {
+     color: var(--bs-iterd);
+}
+.dataTables_paginate  .paginate_button.active > .page-link {
+     border: var(--bs-iterd) solid 1px;
+     color: var(--bs-light) !important;
+     background-color: var(--bs-iterd) !important;
+}
+.dataTables_paginate  .paginate_button.active > .page-link:focus, .page-link:active{
+     box-shadow: var(--bs-iterd);
+}
